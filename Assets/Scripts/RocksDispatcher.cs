@@ -5,7 +5,7 @@ using UnityEngine;
 public class RocksDispatcher : MonoBehaviour
 {
 
-    public float speed = 5.0f;
+    public float speed = -5.0f;
 
     public float minSpawnSeconds = 1.0f;
     public float maxSpawnSeconds = 5.0f;
@@ -18,14 +18,15 @@ public class RocksDispatcher : MonoBehaviour
 
     void Start()
     {
-        objectPooler = new ObjectPooler();
+        objectPooler = new ObjectPooler(10, objectToSpawn);
         SpawnRock();
     }
 
     IEnumerable SpawnRock() {
         GameObject rock = (GameObject) objectPooler.GetInstance();
         rock.transform.position = spawnLocation;
-        // TODO: Set speed
+        Rigidbody2D rb = rock.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(speed, 0);
         yield return new WaitForSeconds(2.0f);
         SpawnRock();
     }
