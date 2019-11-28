@@ -2,7 +2,6 @@
 
 ## Técnicas 
 
-
 ## Control de Cámara
 
 Se ha usado la versión de Unity 2019.x.x la cual permite incluir el paquete Cinemachine desde el package manager
@@ -19,6 +18,6 @@ La roca contiene un componente CinemachineCollisionImpulseSource para generar el
 
 Scripts:
 - CameraNoiseInput. Genera el ruido con el click del ratón adquiriendo el componente CinemachineImpulseSource de la MainCamera el cual es donde esta asociado este mismo script.
-- SwitchCamera. Tiene una lista de las cámaras que se quiere usar para cambiar entre ellas. Y utiliza el método "MoveToTopOfPrioritySubqueue" para que la cámara activa se actualize según la cola.
+- SwitchCamera. Tiene una lista de las cámaras que se quiere usar para cambiar entre ellas. Y utiliza el método "MoveToTopOfPrioritySubqueue" para que la cámara activa se actualize según la cola interna. (Se ha optado por este método en vez de activar y desactivar las otras cámaras)
 
 ![](./camera.gif)
