@@ -29,7 +29,10 @@ Se ha usado la versión de Unity 2019.x.x la cual permite incluir el paquete Cin
 Se han creado tres cámaras virtuales:
 
 - CM vcam A. Sigue al "Indiana A". Limitada por el gameobject vacío "ConfineRectCameraA" con Composite Collider y Box collider.
-- CM vcam B. Sigue al "Indiana B" desde más cerca. Limitada por el ConfineRectCameraB
+- CM vcam B. Sigue al "Indiana B" desde más cerca. Limitada por el ConfineRectCameraB. Se le ha añadido una *DeadZone*
+
+![](deadzone.png)
+
 - CM vcam AB. Sique al "TargeGroup Indianas" el cual contiene a ambos indianas con pesos iguales.
 
 Para los ruidos se ha usado en ambos casos tanto en el evento click del ratón como el de colisión con la roca un
