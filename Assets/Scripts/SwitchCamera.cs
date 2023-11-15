@@ -14,6 +14,17 @@ public class SwitchCamera : MonoBehaviour
 
     void Update()
     {
+        var lastSize = virtualCameras[_currentCamera].m_Lens.OrthographicSize;
+        // Camera Distance
+        if (Input.GetKeyDown("q")) {
+            virtualCameras[_currentCamera].m_Lens.OrthographicSize += 1f;
+        }
+
+        if (Input.GetKeyDown("e")) {
+            virtualCameras[_currentCamera].m_Lens.OrthographicSize -= 1f;
+        }
+
+        // Space
         bool changeCamera = Input.GetButtonDown("Jump");
         if (changeCamera && virtualCameras.Length > _currentCamera)
         {

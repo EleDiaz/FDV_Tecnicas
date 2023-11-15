@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// InvokeRepeating???
 // Create a pool for a specified object, initial pool size shouldn't grow significatively if it's set "willGrow"
 public class ObjectPooler : MonoBehaviour
 {
